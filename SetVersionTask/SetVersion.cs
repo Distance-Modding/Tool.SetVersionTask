@@ -26,10 +26,6 @@ namespace SetVersionTask
                     var updater = new CSharpUpdater(AssemblyVersion, AssemblyFileVersion);
                     updater.UpdateFile(FileName);
                 }
-                else if (this.FileName.EndsWith(".nuspec", StringComparison.OrdinalIgnoreCase))
-                {
-                    UpdateNuSpec();
-                }
             }
             catch (Exception e)
             {
@@ -38,17 +34,5 @@ namespace SetVersionTask
             }
             return true;
         }
-
-        private void UpdateNuSpec()
-        {
-
-
-        }
-
-        private void ValidateArguments()
-        {
-
-        }
-
     }
 }
